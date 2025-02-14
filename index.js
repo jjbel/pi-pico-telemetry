@@ -6,7 +6,10 @@ socket.onclose = event => {
     console.log("closed websocket")
 }
 socket.onmessage = event => {
-    console.log("received", event.data)
+    // event.data is a Blob, and text() returns a Promise
+    event.data.text().then(text => {
+        console.log(text)
+    })
 }
 
 console.log("start.")
