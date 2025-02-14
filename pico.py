@@ -15,3 +15,4 @@ while True:
     print(out)
     sleep(0.1)
     i += 1
+    i %= len(data)
