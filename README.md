@@ -12,6 +12,18 @@ Made for the IIT-B Rocket Team's Ground Station.
 >
 > We might switch to use one board exclusively in the future
 
+## Run
+
+Run the webserver:
+```sh
+venv/bin/python webserver.py
+```
+
+Run the data sender from serial to socket:
+```sh
+venv/bin/python serial_to_socket.poy
+```
+
 ## Pi-Pico communication
 
 [Using: Medium - Tim Hanewich](https://timhanewich.medium.com/using-uart-between-a-raspberry-pi-pico-and-raspberry-pi-3b-raspbian-71095d1b259f)
