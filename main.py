@@ -3,6 +3,8 @@
 from flask import Flask, redirect
 from pathlib import Path
 
+# TODO use http.server - directly hosts file
+
 app = Flask(__name__,
             static_url_path='', 
             static_folder='./')
