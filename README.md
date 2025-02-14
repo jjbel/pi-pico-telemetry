@@ -36,8 +36,24 @@ UART shows up as file:
 `/dev/ttyAMA0` [(from forum)](https://forums.raspberrypi.com/viewtopic.php?t=31141)
 
 
-### Other Useful Links
+## Other Useful Links
 
 [Geekculture Medium](https://medium.com/geekculture/serial-connection-between-raspberry-pi-and-raspberry-pico-d6c0ba97c7dc)
 
 [How to enable Tx Rx pins on Pi](https://spellfoundry.com/2016/05/29/configuring-gpio-serial-port-raspbian-jessie-including-pi-3-4/)
+
+### Getting started with the Raspberry Pi
+
+[Run in Headless mode](https://web.archive.org/web/https://www.tomshardware.com/reviews/raspberry-pi-headless-setup-how-to,6028.html) (Tom's Hardware)
+
+### Getting started with the Raspberry Pi Pico
+
+[Getting Started](https://projects.raspberrypi.org/en/projects/getting-started-with-the-pico) (includes webserver and GPIO tutorials)
+
+### Websockets
+
+[MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
+
+[MDN writing client apps](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
+
+Python [websockets docs](https://websockets.readthedocs.io/en/stable/)
