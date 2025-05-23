@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Telemetry</title>
 
+    <script src="state.js" defer></script>
     <script src="index.js" defer></script>
-</head>
-<body>
-    Telemetry hello!
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    Telemetry App
+
+    <canvas id="temperature"></canvas>
+    <canvas id="altitude"></canvas>
+    <canvas id="acceleration"></canvas>
+    <canvas id="velocity"></canvas>
+    <canvas id="airSpeed"></canvas>
+  </body>
 </html>
