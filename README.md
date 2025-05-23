@@ -4,27 +4,60 @@ A telemetry server using
 1. a Raspberry Pi Pico to receive data wirelessly from the rocket and
 2. a regular Raspberry Pi to host the telemetry webpage, easily accessible from a phone
 
+[Websockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) are used send data from the Pi to the client browser.
+
 Made for the IIT-B Rocket Team's Ground Station.
 
 > Why not use the pico only? the limited RAM and micropython restriction
 >
-> Why not use the pi only? the libraries for wireless communication are only on the
+> Why not use the pi only? the libraries for wireless communication are only on the Pico
 >
 > We might switch to use one board exclusively in the future
 
+## Install
+
+1. Activate `venv`
+
+A Python [venv](https://docs.python.org/3/library/venv.html) is used for handling dependency versions easily.
+
+On the Raspberry Pi:
+```
+python -m venv venv
+./venv/bin/activate
+```
+
+On Windows (when testing the frontend):
+```
+python -m venv venv
+.\venv\Scripts\activate.bat
+```
+
+2. Install Python dependencies
+
+```
+pip install -r requirements.txt
+```
+
 ## Run
 
-Run the webserver:
+1. Run the webserver:
 ```sh
-venv/bin/python webserver.py
+python webserver.py
 ```
 
-Run the data sender from serial to socket:
+2. Run the data sender from serial to socket:
 ```sh
-venv/bin/python serial_to_socket.poy
+python serial_to_socket.py
 ```
 
-## Pi-Pico communication
+When testing on a laptop, instead of `serial_to_socket.py`, run `test_socket.py` which sends sample data in the local file `test_data.csv`
+
+2. Run the data sender from serial to socket:
+```sh
+python test_socket.py
+```
+
+## Pi-Pico UART communication
 
 [Using: Medium - Tim Hanewich](https://timhanewich.medium.com/using-uart-between-a-raspberry-pi-pico-and-raspberry-pi-3b-raspbian-71095d1b259f)
 
