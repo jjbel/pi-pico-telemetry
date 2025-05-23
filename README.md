@@ -1,6 +1,7 @@
 # Pi-Pico Telemetry
 
 A telemetry server using
+
 1. a Raspberry Pi Pico to receive data wirelessly from the rocket and
 2. a regular Raspberry Pi to host the telemetry webpage, easily accessible from a phone
 
@@ -21,12 +22,14 @@ Made for the IIT-B Rocket Team's Ground Station.
 A Python [venv](https://docs.python.org/3/library/venv.html) is used for handling dependency versions easily.
 
 On the Raspberry Pi:
+
 ```
 python -m venv venv
 ./venv/bin/activate
 ```
 
 On Windows (when testing the frontend):
+
 ```
 python -m venv venv
 .\venv\Scripts\activate.bat
@@ -41,21 +44,30 @@ pip install -r requirements.txt
 ## Run
 
 1. Run the webserver:
+
 ```sh
 python webserver.py
 ```
 
 2. Run the data sender from serial to socket:
+
 ```sh
 python serial_to_socket.py
 ```
 
 When testing on a laptop, instead of `serial_to_socket.py`, run `test_socket.py` which sends sample data in the local file `test_data.csv`
 
-2. Run the data sender from serial to socket:
 ```sh
 python test_socket.py
 ```
+
+3. Open the app at <http://localhost:5000/>
+
+## Frontend
+
+The website is a plain `index.html` file.
+
+The class `State` in `state.js` manages the entire app state. `index.js` opens the socket and updates `State`
 
 ## Pi-Pico UART communication
 
@@ -67,19 +79,20 @@ Physical numbering vs GPIO numbering:
 https://pinout.xyz/
 
 GP UART pins:
+
 - Pico
-    - UART0: 0/1, 12/13, 16/17
-    - UART1: 4/5, 8/9
+  - UART0: 0/1, 12/13, 16/17
+  - UART1: 4/5, 8/9
 - Pi: UART: 8/10
 
 Connections:
+
 1. Pi8(GP15) > Pico7(GP5)
 1. Pico6(GP4) > Pi10(16)
 1. Pi6(GND) > Pico3(GND)
 
 UART shows up as file:
 `/dev/ttyAMA0` [(from forum)](https://forums.raspberrypi.com/viewtopic.php?t=31141)
-
 
 ## Other Useful Links
 
