@@ -19,7 +19,7 @@ def handler(websocket):
         # print(out)
 
         # sleep for a short time to simulate delay
-        sleep(0.5)
+        sleep(0.05)
         i += 1
 
 if __name__ == "__main__":
